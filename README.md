@@ -1,73 +1,121 @@
-# React + TypeScript + Vite
+# Valheim Wiki
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una wiki interactiva y moderna creada para entender a fondo las mecánicas de combate de **Valheim**.
 
-Currently, two official plugins are available:
+Este proyecto surge de una necesidad real: entre mis amigos y yo notamos que la mayoría de guías disponibles en internet se limitan a texto plano acompañado de imágenes estáticas. La información existe, pero no está pensada para **analizar, comparar ni tomar decisiones dentro del juego**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Por eso decidí construir una versión propia de la wiki, enfocada en:
 
-## React Compiler
+* Comprender qué **armas y objetos funcionan mejor contra cada enemigo**.
+* Visualizar estadísticas de forma clara y estructurada.
+* Facilitar la comparación entre daño, resistencias y debilidades.
+* Ofrecer una experiencia más interactiva y didáctica.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## Objetivo del proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Crear una plataforma que permita a cualquier jugador:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Elegir correctamente su equipamiento.
+* Entender las mecánicas internas del juego.
+* Reducir la dependencia de guías extensas y confusas.
+* Aprender jugando, no leyendo párrafos interminables.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Este proyecto no busca reemplazar la wiki oficial, sino **complementarla con una visión práctica y visual**.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Tecnologías utilizadas
+
+### Front-end
+
+* **React** – Arquitectura de componentes.
+* **TypeScript** – Tipado fuerte y código mantenible.
+* **Tailwind CSS** – Diseño rápido, limpio y escalable.
+
+### Back-end *(en desarrollo / si aplica)*
+
+* Node.js
+* Express
+* Prisma ORM
+* PostgreSQL / MySQL
+
+---
+
+## Características principales
+
+* Visualización clara de estadísticas.
+* Daños, resistencias y debilidades por enemigo.
+* Comparación entre armas.
+* Interfaz intuitiva y enfocada en la experiencia del jugador.
+* Diseño responsive.
+
+---
+
+## Vista previa
+
+*(Próximamente imágenes o GIF del proyecto en funcionamiento)*
+
+---
+
+## Estructura del proyecto
+
+```bash
+valheim-wiki/
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── prisma/
+│   └── middlewares/
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Estado del proyecto
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**En desarrollo activo**
+
+El proyecto se encuentra en constante evolución. Las funcionalidades se agregan de forma progresiva priorizando:
+
+1. Calidad del código.
+2. Escalabilidad.
+3. Claridad en la información.
+
+---
+
+## Próximas mejoras
+
+* Sistema de filtros avanzados.
+* Buscador por enemigo o arma.
+* Comparador dinámico.
+* Soporte multilenguaje.
+* Panel administrativo.
+
+---
+
+## Contribuciones
+
+Las contribuciones son bienvenidas.
+
+Si deseas aportar:
+
+1. Haz un fork del proyecto.
+2. Crea una rama (`feature/nueva-funcionalidad`).
+3. Realiza tus cambios.
+4. Envía un Pull Request.
+
+---
+
+## Autor
+
+**Jhon Smith**
+Desarrollador de software, enfocado en construir proyectos reales, escalables y con propósito.
+
+> "Aprender creando es la forma más eficiente de crecer como desarrollador."
